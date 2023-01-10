@@ -1,5 +1,5 @@
 //TODO create classes such as Card, Deck & Player
-//NOTE - this creates a class called card, that passes two arguments
+//NOTE - this creates a class called card, that passes two parameters.
 class Card {
   constructor(cardValue, cardSuit) {
     this.cardValue = cardValue;
@@ -7,6 +7,7 @@ class Card {
   }
 }
 
+//NOTE - Creates a Deck class that assigns 2 properties, one for the card deck, and then a card rank array, displaying each rank of each card type.
 class Deck {
   constructor() {
     this.cardDeck = [];
@@ -27,8 +28,12 @@ class Deck {
     ];
     this.cardValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     this.cardSuit = ["hearts", "diamonds", "spades", "clubs"];
+    //NOTE - cardValue - Assignes the cardvalue property an array of numbers representing the value of each card in the cardRank array
+    //NOTE - CardSuit - assigns an array that represents the suit of each card.
   }
   // create cards
+
+  //NOTE - This generates a deck of cards each with a rank and suit. The cardSuit & cardvalue arrays loop though each card suit and each value and stores everything in an array called cardDeck
   createCards() {
     for (let cardLoop = 0; cardLoop < this.cardSuit.length; cardLoop++) {
       for (let i = 0; i < this.cardValue.length; i++) {
